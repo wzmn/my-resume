@@ -56,6 +56,12 @@ div.small p {
     opacity: 0.1;
     top: 0;
 }
+.top-gray i {
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 6em;
+    font-style: normal;
+    position: absolute;
+}
 .top-gray-left {
 	position: absolute;
     bottom: 25%;
@@ -105,6 +111,7 @@ div.small p {
 }
 .top-blue-content{
 	padding-left:60px;
+	color: #d5e9eb;
 }
 .top-blue-content>div {
 	margin-top: 40px;
@@ -209,6 +216,7 @@ div.small p {
 .mid-red-content {
 	padding-left: 60px;
     padding-right: 60px;
+    color: #d5e9eb;
 }
 div.skills {
     padding-left: 40px;
