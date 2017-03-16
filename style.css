@@ -197,12 +197,12 @@ div.small p {
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(58, 58, 58, 0);
-	border-top-color: #ef4836;
+	border-top-color: #EC644B;
 	border-width: 50px;
 	margin-left: -50px;
 }
 .mid-red {
-	background-color: #EF4836;
+	background-color: #EC644B;
 	padding-top: 100px;
 	padding-bottom: 40px;
 }
@@ -260,12 +260,15 @@ div.skills p {
 	padding-bottom: 40px;
 	background-color: #2C3E50;
 }
-
+.bot-content .col-sm-4 a:hover, .bot-content .col-sm-4 a {
+	color: #BFBFBF;
+	text-decoration: none;
+}
 .fa-linkedin {
 	color:#007bb5;
 }
-.fa-facebook {
-	color: #3b5998;
+.fa-phone {
+	color: #BFBFBF;
 }
 .fa-envelope {
 	color: #dd4b39;
