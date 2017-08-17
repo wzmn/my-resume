@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Wiseman's synopsis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Emblema+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/16.7.3/jcanvas.min.js"></script>
+	<style type="text/css">
+		h6 {
+		    font-family: 'Emblema One', cursive !important;
+		    color: #263240;
+		    font-size: 2em;
+		    margin-left: 10px;
+		}
+		.f {
+			position: absolute;
+			right: 11px;
+		}
+		a {
+			text-decoration: none !important;
+		}
+		.jumbotron {
+			min-height: 100vh;
+		}
+		.fa-10x {
+			font-size: 6em;
+		}
+		.devicons {
+			font-size: 1.7rem !important;
+		}
+		.spacer {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		.spacer-small {
+			margin-top: 25px;
+			margin-bottom: 25px; 
+		}
+		.b-blue {
+		    border-top: 1px solid;
+		    border-right: 1px dashed;
+		    padding: 10px 0px 10px 0px;
+		    color: #263240;
+		}
+		body {
+			background: #f2f2f2;
+		}
+		.fa-chevron-down {
+			border: 1px solid black;
+		    padding: 7px;
+		    color: #263240;
+		}
+		.fa-chevron-up {
+			border: 1px solid black;
+		    padding: 7px;
+		    color: #263240;
+		}
+		.emp .card-text {
+		    padding: 1%;
+		    background: transparent;
+		    margin-bottom: 25px;
+		    border-left: 1px dashed;
+		}
+		.emp > .card-header {
+		    background: transparent;
+		    border-bottom: 1px solid;
+		    border-right: 1px dashed;
+		}
+		.fa-linkedin {
+		    color: #007bb5;
+		}
+		.fa-phone {
+		    color: #BFBFBF;
+		}
+		.fa-envelope {
+		    color: #dd4b39;
+		}
+		.fa-music {
+			color: #fcc745;
+		}
+		.fa-gamepad {
+			color: #7dad47;
+		}
+		.fa-motorcycle {
+			color: #f04109;
+		}
+		.red {
+		    background: transparent;
+		    border-left: 1px dashed;
+		    border-top: 1px solid;
+		    border-radius: 0 !important;
+		    border-bottom: 0px;
+		}
+		.red * {
+			color: #263240;
+		}
+		.fa-motorcycle {
+			animation:col3 1s infinite;
+			-moz-animation:col2 1s infinite; /* Firefox */
+			-webkit-animation:col2 1s infinite; /* Safari and Chrome */			
+		}
+		.fa-gamepad {
+			animation:col3 10s infinite;
+			-moz-animation:col3 10s infinite; /* Firefox */
+			-webkit-animation:col3 10s infinite; /* Safari and Chrome */				
+		}
+		.fa-music {
+			animation:col3 5s infinite;
+			-moz-animation:col 5s infinite; /* Firefox */
+			-webkit-animation:col 5s infinite; /* Safari and Chrome */
+        }
+		@keyframes col {
+			0%   {color: #F0F567;}
+			25%  {color: #B86982;}
+			50% {color: #804658;}
+			75%  {color: #06524D;}
+			100%   {color: #B5B861;}
+	    }
+		@keyframes col2 {
+			0%   {color: #573847;}
+			20%   {color: #66464F;}
+			40%  {color: #705351;}
+			50% {color: #8A6D60;}
+			60%  {color: #BDA488;}
+			70% {color: #8A6D60;}
+			80%  {color: #705351;}
+			100%   {color: #66464F;}
+	    }
+		@keyframes col3 {
+			0%   {color: #41A3A2;}
+			25%  {color: #526BA3;}
+			50% {color: #694E9C;}
+			75%  {color: #8C3A91;}
+			100%   {color: #A8225C;}
+	    }
+        @-moz-keyframes col1 {
+			0%   {color: #F0F567;}
+			25%  {color: #B86982;}
+			50% {color: #804658;}
+			75%  {color: #06524D;}
+			100%   {color: #B5B861;}
+        }
+        @-webkit-keyframes col1 {
+			0%   {color: #F0F567;}
+			25%  {color: #B86982;}
+			50% {color: #804658;}
+			75%  {color: #06524D;}
+			100%   {color: #B5B861;}
+        }
+        @-moz-keyframes col2 {
+			0%   {color: #573847;}
+			20%   {color: #66464F;}
+			40%  {color: #705351;}
+			50% {color: #8A6D60;}
+			60%  {color: #BDA488;}
+			70% {color: #8A6D60;}
+			80%  {color: #705351;}
+			100%   {color: #66464F;}
+        }
+        @-webkit-keyframes col2 {
+			0%   {color: #573847;}
+			20%   {color: #66464F;}
+			40%  {color: #705351;}
+			50% {color: #8A6D60;}
+			60%  {color: #BDA488;}
+			70% {color: #8A6D60;}
+			80%  {color: #705351;}
+			100%   {color: #66464F;}
+        }
+        @-moz-keyframes col3 {
+			0%   {color: #41A3A2;}
+			25%  {color: #526BA3;}
+			50% {color: #694E9C;}
+			75%  {color: #8C3A91;}
+			100%   {color: #A8225C;}
+        }
+        @-webkit-keyframes col3 {
+			0%   {color: #41A3A2;}
+			25%  {color: #526BA3;}
+			50% {color: #694E9C;}
+			75%  {color: #8C3A91;}
+			100%   {color: #A8225C;}
+        }
+        .grid {
+			background-size: 20px 20px;
+		    background-image:linear-gradient(to right, #cecece 1px, transparent 1px), linear-gradient(to bottom, #cecece 1px, transparent 1px);
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    opacity: 0.1;
+		    top: 0;
+        }
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="grid"></div>
+	<div class="row clearfix b-blue">
+		<div class="col-sm-12">
+			<div class="float-left media">
+				<i class="fa fa-user fa-3x media-body"></i>
+				<h6 class="align-self-center d-flex">About</h6>
+				<!-- <i class="fa fa-2x">
+					About
+				</i>  -->
+			</div>
+			<div class="f">
+				<a data-toggle="collapse" href="#profile"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+			</div>
+		</div>
+	</div>
+	<div id="profile" class="collapse show spacer">
+		<div class="row spacer-small">
+			<div class="col-sm-7 col-12">
+				<div class="row">
+					<div class="col-sm-8">
+						<h1 class="display-4">Wiseman Fernandes</h1>
+						<h4 class="">Web Developer</h4>
+					</div>	
+				</div>
+			</div>										
+			<div class="col-sm-2 col-6">
+				<p><strong>
+					Date of Birth:
+				</strong></p>
+				<p><strong>
+					Address:
+				</strong></p>
+				<p><strong>
+					Email:
+				</strong></p>
+			</div>										
+			<div class="col-sm-3 col-6">
+				<p>1/12/1993</p>
+				<p>Goa, India</p>
+				<p>wizyman@gmail.com</p>
+			</div>
+			<div class="col-sm-12 spacer-small">
+				<h5>Hi, I'm Wiseman, a freelance web designer,based in Goa, India.
+
+				Originally a network engineer, I left networking and transitioned to working solely as a web developer.
+				</h5>
+			</div>												
+		</div>
+	</div>
+	<div class="row clearfix spacer b-blue">
+		<div class="col-sm-12">
+			<div class="float-left media">
+				<i class="fa fa-align-left fa-3x media-body"></i>
+				<h6 class="align-self-center d-flex">Some more about me..</h6>
+			</div>
+			<div class="f">
+				<a data-toggle="collapse" href="#resume"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+			</div>
+		</div>
+	</div>
+	<div id="resume" class="collapse show spacer">
+		<div class="row spacer-small">
+			<div  class="col-sm-8">
+				<div id="accordion" role="tablist" aria-multiselectable="true">
+				  <div class="">
+				    <div class="card-header red" role="tab" id="headingOne">
+				      <h4 class="mb-0">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+				          Employment
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+				      <div class="card-block">
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Freelance</h5><small class="text-muted float-right">2016 - Present</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">Freelance web design and development</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Webbles</h5><small class="text-muted float-right">2015 - 2015</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text"><strong>Web Developer</strong><br>
+						    Responsible for designing, coding and modifying websites, from layout to function and according to a client's specification.</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Kodework</h5><small class="text-muted float-right">2015 (April - October)</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">
+						    <strong>Quality Assurance Specialist</strong><br>
+						    Responsible for testing projects to verify browser compatibility, SEO, Responsive for desktop and mobile.</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Divine Computers</h5><small class="text-muted float-right">2014 - 2015</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">
+						    <strong>Field Engineer</strong><br>
+						    Responsible for troubleshooting computer and networkproblems, installation of networks solutions. Deployment of new computers/laptops etc.</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Segment Y</h5><small class="text-muted float-right">2013 - 2014</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">
+						    <strong>Data Analyst</strong><br>
+						    Dataentryofvariousautomotivestatistics.
+							Scanning automotive brochures and pricelists.
+							Maintaining records of scanned materials and those published on-line.
+							Supporting news &amp; researchesetc.</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Ethernet X-press</h5><small class="text-muted float-right">2012 - 2013</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">
+						    	<strong>Network Field Engineer</strong><br>
+						    	Designing and implementing networks for internet around Goa
+						    </p>
+						  </div>
+						</div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="">
+				    <div class="card-header red" role="tab" id="headingTwo">
+				      <h4 class="mb-0">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+				          Education
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo">
+				      <div class="card-block">
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Innobuzz</h5><small class="text-muted float-right">2016 - 2017</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">Diploma In Web Application Security</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Education</h5><small class="text-muted float-right">2011 - 2012</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">Diploma In Hardware And Networking</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Living Hope Theological School</h5><small class="text-muted float-right">2009 - 2011</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">Bachelor of Theology</p>
+						  </div>
+						</div>
+						<div class="emp">
+						  <div class="card-header clearfix">
+						    <h5 class="float-left">Don Bosco</h5><small class="text-muted float-right">2008 - 2009</small>
+						  </div>
+						  <div class="card-body">
+						    <p class="card-text">Senior Secondary Course</p>
+						  </div>
+						</div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>	
+			<div class="col-sm-4">
+				<h4>Programming Skills</h4>
+				<p>
+					<h5><i class="fa fa-html5"></i>  HTML</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="fa fa-css3"></i> CSS</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="devicons devicons-javascript"></i>  Javascipt</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="devicons devicons-jquery"></i> Jquery</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="devicons devicons-wordpress"></i>  WordPress</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="devicons devicons-php"></i> PHP</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-info" role="progressbar" style="width: 67%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="fa fa-paint-brush"></i>  Graphic design</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-warning" role="progressbar" style="width: 59%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+				<p>
+					<h5><i class="fa fa-sitemap"></i> Networking</h5>
+					<div class="progress">
+					  <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix spacer b-blue">
+		<div class="col-sm-12">
+			<div class="float-left media">
+				<i class="fa fa-rocket fa-3x media-body"></i>
+				<h6 class="align-self-center d-flex">Hobbies</h6> 
+			</div>
+			<div class="f">
+				<a data-toggle="collapse" href="#hobbies"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+			</div>
+		</div>
+	</div>
+	<div id="hobbies" class="collapse show spacer">
+		<div class="row">
+			<div class="spacer-small col-sm-4 text-center">
+				<h4>Music</h4>
+				<i class="fa fa-music fa-10x"></i>
+			</div>
+			<div class="spacer-small col-sm-4 text-center">
+				<h4>Gaming</h4>
+				<i class="fa fa-gamepad fa-10x"></i>
+			</div>
+			<div class="spacer-small col-sm-4 text-center">
+				<h4>Riding</h4>
+				<i class="fa fa-motorcycle fa-10x"></i>
+			</div>
+		</div>			
+	</div>
+	<div class="row clearfix spacer b-blue">
+		<div class="col-sm-12">
+			<div class="float-left media">
+				<i class="fa fa-handshake-o fa-3x media-body"></i>
+				<h6 class="align-self-center d-flex">Connect</h6>
+			</div>
+			<div class="f">
+				<a data-toggle="collapse" href="#connect"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+			</div>
+		</div>
+	</div>
+	<div id="connect" class="collapse show spacer">
+		<div class="row spacer-small">
+			<div class="col-sm-4 col-4 text-center">
+				<a href="https://www.linkedin.com/in/wiseman-fernandes-1b556a80/">
+					<i class="fa fa-linkedin fa-5x"></i><br>
+					.in/wiseman-fernandes-1b556a80/
+				</a>
+			</div>
+			<div class="col-sm-4 col-4 text-center">
+				<a href="mailto:wizyman@gmail.com">
+					<i class="fa fa-envelope fa-5x"></i><br>
+					wizyman@gmail.com
+				</a>
+			</div>
+			<div class="col-sm-4 col-4 text-center">
+				<a href="tel:+918975574907">
+					<i class="fa fa-phone fa-5x"></i><br>
+					+91 897 557 4907
+				</a>
+			</div>
+		</div>			
+	</div>
+</div> <!-- end -->
+<script type="text/javascript">
+$(".chev").click(function(){$(this.closest("a").attributes[1].value).hasClass("show") ? this.attributes[0].value = "fa fa-chevron-down fa-2x" : this.attributes[0].value = "fa fa-chevron-up fa-2x";});
+</script>
+</body>
+</html>
