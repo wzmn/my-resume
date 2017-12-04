@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+
+		“There is always room for improvement.” 
+		
+-->
 <head>
 	<title>Wiseman's synopsis</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +30,9 @@
 		}
 		a {
 			text-decoration: none !important;
+		}
+		a[data-target='#exampleModal'] {
+			cursor: pointer;
 		}
 		.jumbotron {
 			min-height: 100vh;
@@ -89,7 +97,7 @@
 			color: #7dad47;
 		}
 		.fa-motorcycle {
-			color: #f04109;
+			color: white;
 		}
 		.red {
 		    background: transparent;
@@ -102,9 +110,18 @@
 			color: #263240;
 		}
 		.fa-motorcycle {
-			animation:col3 1s infinite;
-			-moz-animation:col2 1s infinite; /* Firefox */
-			-webkit-animation:col2 1s infinite; /* Safari and Chrome */			
+			animation:col3 2s infinite;
+			-moz-animation:col2 2s infinite; /* Firefox */
+			-webkit-animation:col2 2s infinite; /* Safari and Chrome */			
+		}
+		.wheels {
+		    position: absolute;
+		    left: 50.1%;
+		    top: 52.7%;
+		    transform: translate(-50%, 0%);
+		}
+		.wheels i:last-child {
+			margin-left: 10px;
 		}
 		.fa-gamepad {
 			animation:col3 10s infinite;
@@ -124,14 +141,9 @@
 			100%   {color: #B5B861;}
 	    }
 		@keyframes col2 {
-			0%   {color: #573847;}
-			20%   {color: #66464F;}
-			40%  {color: #705351;}
-			50% {color: #8A6D60;}
-			60%  {color: #BDA488;}
-			70% {color: #8A6D60;}
-			80%  {color: #705351;}
-			100%   {color: #66464F;}
+			0%   {color: #292b2c;}
+			50%   {color: black;}
+			100%   {color: #292b2c;}
 	    }
 		@keyframes col3 {
 			0%   {color: #41A3A2;}
@@ -207,9 +219,6 @@
 			<div class="float-left media">
 				<i class="fa fa-user fa-3x media-body"></i>
 				<h6 class="align-self-center d-flex">About</h6>
-				<!-- <i class="fa fa-2x">
-					About
-				</i>  -->
 			</div>
 			<div class="f">
 				<a data-toggle="collapse" href="#profile"><i class="fa fa-chevron-up chev fa-2x"></i></a>
@@ -226,22 +235,6 @@
 					</div>	
 				</div>
 			</div>										
-			<div class="col-sm-2 col-6">
-				<p><strong>
-					Date of Birth:
-				</strong></p>
-				<p><strong>
-					Address:
-				</strong></p>
-				<p><strong>
-					Email:
-				</strong></p>
-			</div>										
-			<div class="col-sm-3 col-6">
-				<p>1/12/1993</p>
-				<p>Goa, India</p>
-				<p>wizyman@gmail.com</p>
-			</div>
 			<div class="col-sm-12 spacer-small">
 				<h5>Hi, I'm Wiseman, a freelance web designer,based in Goa, India.
 
@@ -319,10 +312,10 @@
 						  <div class="card-body">
 						    <p class="card-text">
 						    <strong>Data Analyst</strong><br>
-						    Dataentryofvariousautomotivestatistics.
-							Scanning automotive brochures and pricelists.
-							Maintaining records of scanned materials and those published on-line.
-							Supporting news &amp; researchesetc.</p>
+						    Data entry of various automotive statistics.<br>
+							Scanning automotive brochures and pricelists.<br>
+							Maintaining records of scanned materials and those published on-line.<br>
+							Supporting news &amp; researches etc.</p>
 						  </div>
 						</div>
 						<div class="emp">
@@ -403,7 +396,7 @@
 				<p>
 					<h5><i class="devicons devicons-javascript"></i>  Javascipt</h5>
 					<div class="progress">
-					  <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					  <div class="progress-bar bg-warning" role="progressbar" style="width: 82%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</p>
 				<p>
@@ -463,6 +456,10 @@
 			<div class="spacer-small col-sm-4 text-center">
 				<h4>Riding</h4>
 				<i class="fa fa-motorcycle fa-10x"></i>
+				<div class="wheels col-sm-12">
+					<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+					<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+				</div>
 			</div>
 		</div>			
 	</div>
@@ -479,29 +476,53 @@
 	</div>
 	<div id="connect" class="collapse show spacer">
 		<div class="row spacer-small">
-			<div class="col-sm-4 col-4 text-center">
+			<div class="col-sm-3 col-12 text-center">
 				<a href="https://www.linkedin.com/in/wiseman-fernandes-1b556a80/">
 					<i class="fa fa-linkedin fa-5x"></i><br>
 					.in/wiseman-fernandes-1b556a80/
 				</a>
 			</div>
-			<div class="col-sm-4 col-4 text-center">
+			<div class="col-sm-3 col-12 text-center">
 				<a href="mailto:wizyman@gmail.com">
 					<i class="fa fa-envelope fa-5x"></i><br>
 					wizyman@gmail.com
 				</a>
 			</div>
-			<div class="col-sm-4 col-4 text-center">
+			<div class="col-sm-3 col-12 text-center">
 				<a href="tel:+918975574907">
 					<i class="fa fa-phone fa-5x"></i><br>
 					+91 897 557 4907
 				</a>
 			</div>
-		</div>			
+			<div class="col-sm-3 col-12 text-center">
+				<a href="#" data-toggle="modal" data-target="#exampleModal">
+					<i class="fa fa-link fa-5x"></i><br>
+					A sample of my work
+				</a>	
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <p class="modal-title" id="exampleModalLabel">&nbsp;</p>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+				      </div>
+				      <div class="modal-body">
+				        <h5><a href="https://sterlinggemsth.com/" target="_blank">Sterling Gems</a></h5>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>		
 	</div>
-</div> <!-- end -->
+</div>
 <script type="text/javascript">
-$(".chev").click(function(){$(this.closest("a").attributes[1].value).hasClass("show") ? this.attributes[0].value = "fa fa-chevron-down fa-2x" : this.attributes[0].value = "fa fa-chevron-up fa-2x";});
+$(function(){
+	$("a[data-target='#exampleModal']").click(function(){$('#myModal').modal('toggle')});
+	$(".chev").click(function(){$(this.closest("a").attributes[1].value).hasClass("show") ? this.attributes[0].value = "fa fa-chevron-down fa-2x" : this.attributes[0].value = "fa fa-chevron-up fa-2x";});
+})
 </script>
 </body>
 </html>
