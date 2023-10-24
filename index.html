@@ -6,537 +6,739 @@
 		
 -->
 <head>
-	<title>Wiseman's synopsis</title>
+	<title>Wiseman's Synopsis</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+	<link href='https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Emblema+One" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/d44e5b7283.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/16.7.3/jcanvas.min.js"></script>
 	<style type="text/css">
+		:root {
+			--primary: #000000;
+			--secondary: #263240;
+			--background: #f2f2f2;
+
+            --light-grey:#f2f2f2;
+            --dark-grey: #263240;
+
+            --btn-width: 50px;
+            --btn-height: var(--btn-width);
+		}
+		body {
+			background: var(--background);
+			color: var(--primary);
+			transition: all 0.5s ease;
+		}
+		body.dark {
+			--primary: #f2f2f2;
+			--secondary: #f2f2f2;
+			--background: #121212;
+		}
 		h6 {
-		    font-family: 'Emblema One', cursive !important;
-		    color: #263240;
-		    font-size: 2em;
-		    margin-left: 10px;
+			font-family: 'Emblema One', cursive !important;
+			color: var(--secondary);
+			font-size: 2em;
+			margin-left: 10px;
 		}
-		.f {
-			position: absolute;
-			right: 11px;
+		.flex-between {
+			display: flex;
+			justify-content: space-between;
 		}
-		a {
-			text-decoration: none !important;
-		}
-		a[data-target='#exampleModal'] {
-			cursor: pointer;
-		}
+
 		.jumbotron {
 			min-height: 100vh;
 		}
+
 		.fa-10x {
 			font-size: 6em;
 		}
-		.devicons {
-			font-size: 1.7rem !important;
-		}
+
 		.spacer {
 			margin-top: 50px;
 			margin-bottom: 50px;
 		}
+
 		.spacer-small {
 			margin-top: 25px;
-			margin-bottom: 25px; 
+			margin-bottom: 25px;
 		}
+
 		.b-blue {
-		    border-top: 1px solid;
-		    border-right: 1px dashed;
-		    padding: 10px 0px 10px 0px;
-		    color: #263240;
+			border-top: 1px solid;
+			border-right: 1px dashed;
+			padding: 10px 0px 10px 0px;
+			color: var(--secondary);
 		}
-		body {
-			background: #f2f2f2;
-		}
+
 		.fa-chevron-down {
 			border: 1px solid black;
-		    padding: 7px;
-		    color: #263240;
+			padding: 7px;
+			color: var(--secondary);
 		}
+
 		.fa-chevron-up {
 			border: 1px solid black;
-		    padding: 7px;
-		    color: #263240;
+			padding: 7px;
+			color: var(--secondary);
 		}
+
 		.emp .card-text {
-		    padding: 1%;
-		    background: transparent;
-		    margin-bottom: 25px;
-		    border-left: 1px dashed;
+			padding: 10px;
+			background: transparent;
+			margin-bottom: 25px;
+			border-left: 1px dashed;
 		}
-		.emp > .card-header {
-		    background: transparent;
-		    border-bottom: 1px solid;
-		    border-right: 1px dashed;
+
+		.emp>.card-header {
+			background: transparent;
+			border-bottom: 1px solid;
+			border-right: 1px dashed;
 		}
+
 		.fa-linkedin {
-		    color: #007bb5;
+			color: #007bb5;
 		}
+
 		.fa-phone {
-		    color: #BFBFBF;
+			color: #BFBFBF;
 		}
+
 		.fa-envelope {
-		    color: #dd4b39;
+			color: #dd4b39;
 		}
+
 		.fa-music {
 			color: #fcc745;
 		}
+
 		.fa-gamepad {
 			color: #7dad47;
 		}
+
 		.fa-motorcycle {
 			color: white;
 		}
+
 		.red {
-		    background: transparent;
-		    border-left: 1px dashed;
-		    border-top: 1px solid;
-		    border-radius: 0 !important;
-		    border-bottom: 0px;
+			background: transparent;
+			border-left: 1px dashed;
+			border-top: 1px solid;
+			border-radius: 0 !important;
+			border-bottom: 0px;
 		}
+
 		.red * {
-			color: #263240;
+			color: var(--secondary);
 		}
+
 		.fa-motorcycle {
-			animation:col3 2s infinite;
-			-moz-animation:col2 2s infinite; /* Firefox */
-			-webkit-animation:col2 2s infinite; /* Safari and Chrome */			
+			color: #0a0a0a;
 		}
-		.wheels {
-		    position: absolute;
-		    left: 50.1%;
-		    top: 52.7%;
-		    transform: translate(-50%, 0%);
-		}
-		.wheels i:last-child {
-			margin-left: 10px;
-		}
+
 		.fa-gamepad {
-			animation:col3 10s infinite;
-			-moz-animation:col3 10s infinite; /* Firefox */
-			-webkit-animation:col3 10s infinite; /* Safari and Chrome */				
+			animation: col3 10s infinite;
+			-moz-animation: col3 10s infinite;
+			/* Firefox */
+			-webkit-animation: col3 10s infinite;
+			/* Safari and Chrome */
 		}
+
 		.fa-music {
-			animation:col3 5s infinite;
-			-moz-animation:col 5s infinite; /* Firefox */
-			-webkit-animation:col 5s infinite; /* Safari and Chrome */
-        }
-		@keyframes col {
-			0%   {color: #F0F567;}
-			25%  {color: #B86982;}
-			50% {color: #804658;}
-			75%  {color: #06524D;}
-			100%   {color: #B5B861;}
-	    }
-		@keyframes col2 {
-			0%   {color: #292b2c;}
-			50%   {color: black;}
-			100%   {color: #292b2c;}
-	    }
+			animation: col3 5s infinite;
+			-moz-animation: col3 5s infinite;
+			/* Firefox */
+			-webkit-animation: col3 5s infinite;
+			/* Safari and Chrome */
+		}
+
 		@keyframes col3 {
-			0%   {color: #41A3A2;}
-			25%  {color: #526BA3;}
-			50% {color: #694E9C;}
-			75%  {color: #8C3A91;}
-			100%   {color: #A8225C;}
-	    }
-        @-moz-keyframes col1 {
-			0%   {color: #F0F567;}
-			25%  {color: #B86982;}
-			50% {color: #804658;}
-			75%  {color: #06524D;}
-			100%   {color: #B5B861;}
-        }
-        @-webkit-keyframes col1 {
-			0%   {color: #F0F567;}
-			25%  {color: #B86982;}
-			50% {color: #804658;}
-			75%  {color: #06524D;}
-			100%   {color: #B5B861;}
-        }
-        @-moz-keyframes col2 {
-			0%   {color: #573847;}
-			20%   {color: #66464F;}
-			40%  {color: #705351;}
-			50% {color: #8A6D60;}
-			60%  {color: #BDA488;}
-			70% {color: #8A6D60;}
-			80%  {color: #705351;}
-			100%   {color: #66464F;}
-        }
-        @-webkit-keyframes col2 {
-			0%   {color: #573847;}
-			20%   {color: #66464F;}
-			40%  {color: #705351;}
-			50% {color: #8A6D60;}
-			60%  {color: #BDA488;}
-			70% {color: #8A6D60;}
-			80%  {color: #705351;}
-			100%   {color: #66464F;}
-        }
-        @-moz-keyframes col3 {
-			0%   {color: #41A3A2;}
-			25%  {color: #526BA3;}
-			50% {color: #694E9C;}
-			75%  {color: #8C3A91;}
-			100%   {color: #A8225C;}
-        }
-        @-webkit-keyframes col3 {
-			0%   {color: #41A3A2;}
-			25%  {color: #526BA3;}
-			50% {color: #694E9C;}
-			75%  {color: #8C3A91;}
-			100%   {color: #A8225C;}
-        }
-        .grid {
+			0% {
+				color: #41A3A2;
+			}
+
+			25% {
+				color: #526BA3;
+			}
+
+			50% {
+				color: #694E9C;
+			}
+
+			75% {
+				color: #8C3A91;
+			}
+
+			100% {
+				color: #A8225C;
+			}
+		}
+
+		@-moz-keyframes col3 {
+			0% {
+				color: #41A3A2;
+			}
+
+			25% {
+				color: #526BA3;
+			}
+
+			50% {
+				color: #694E9C;
+			}
+
+			75% {
+				color: #8C3A91;
+			}
+
+			100% {
+				color: #A8225C;
+			}
+		}
+
+		@-webkit-keyframes col3 {
+			0% {
+				color: #41A3A2;
+			}
+
+			25% {
+				color: #526BA3;
+			}
+
+			50% {
+				color: #694E9C;
+			}
+
+			75% {
+				color: #8C3A91;
+			}
+
+			100% {
+				color: #A8225C;
+			}
+		}
+
+		.grid {
 			background-size: 20px 20px;
-		    background-image:linear-gradient(to right, #cecece 1px, transparent 1px), linear-gradient(to bottom, #cecece 1px, transparent 1px);
-		    position: absolute;
-		    width: 100%;
-		    height: 100%;
-		    opacity: 0.1;
-		    top: 0;
+			background-image: linear-gradient(to right, #cecece 1px, transparent 1px), linear-gradient(to bottom, #cecece 1px, transparent 1px);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0.1;
+			top: 0;
+		}
+
+		.progress {
+			background-color: #e4e4e4;
+			border: 1px solid #fff;
+		}
+
+		.progress-bar {
+			display: flex;
+			height: auto;
+		}
+
+		.progress-bar>div {
+			font-size: 1rem;
+			height: 2rem;
+			display: flex;
+			align-items: center;
+			padding-left: 10px;
+		}
+
+		.progress-bar i {
+			margin-right: 10px;
+		}
+        .theme-toggle {
+            cursor: pointer;
+            border-radius: 50%;
+            background: #f2f2f2;
+            box-shadow:  25px 25px 50px #cecece,
+                        -25px -25px 50px #ffffff;
+            width: var(--btn-width);
+            height: var(--btn-height);
+            display: flex;
+            justify-content: center;
+            transition: all 0.8s ease;
+            overflow: hidden;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        .theme-toggle svg {
+            width: calc(var(--btn-width) / 2);
+            transition: all 1s ease;
+        }
+        .dark .theme-toggle {
+            border-radius: 50%;
+            background: var(--background);
+            box-shadow:  20px 20px 60px #0f0f0f,
+             -20px -20px 60px #151515;
+        }
+        .dark #Sun {
+            stroke: var(--primary);
+            fill: var(--primary);
+            transform: translate(0px, -50%) rotate(0deg);
+            transform-origin: 0% 0%;
+            opacity: 1;
+        } 
+        .dark #Moon {
+            fill: var(--light-grey);
+            transform: translate(0px, -50%) rotate(90deg);
+            transform-origin: calc(var(--btn-width) / -2) var(--btn-width);
+            opacity: 0;
+        }
+		.dark .fa-motorcycle {
+			color: var(--primary);
+		}
+        #Sun {
+            position: absolute;
+            opacity: 0;
+            top: 50%;
+            transform: translate(0px, -50%) rotate(-90deg);
+            transform-origin: var(--btn-width) var(--btn-width);
+            stroke: var(--dark-grey);
+            fill: var(--light-grey);
+        }
+        #Moon {
+            position: absolute;
+            top: 50%;
+            transform: translate(0px, -50%) rotate(0deg);
+            transform-origin: 0% 0%;
+            fill: var(--dark-grey);
+            opacity: 1;
         }
 	</style>
 </head>
-<body>
-<div class="container">
-<div class="grid"></div>
-	<div class="row clearfix b-blue">
-		<div class="col-sm-12">
-			<div class="float-left media">
-				<i class="fa fa-user fa-3x media-body"></i>
-				<h6 class="align-self-center d-flex">About</h6>
-			</div>
-			<div class="f">
-				<a data-toggle="collapse" href="#profile"><i class="fa fa-chevron-up chev fa-2x"></i></a>
-			</div>
-		</div>
-	</div>
-	<div id="profile" class="collapse show spacer">
-		<div class="row spacer-small">
-			<div class="col-sm-7 col-12">
-				<div class="row">
-					<div class="col-sm-8">
-						<h1 class="display-4">Wiseman Fernandes</h1>
-						<h4 class="">Web Developer</h4>
-					</div>	
-				</div>
-			</div>										
-			<div class="col-sm-12 spacer-small">
-				<h5>Hi, I'm Wiseman, a freelance web designer,based in Goa, India.
 
-				Originally a network engineer, I left networking and transitioned to working solely as a web developer.
-				</h5>
-			</div>												
-		</div>
-	</div>
-	<div class="row clearfix spacer b-blue">
-		<div class="col-sm-12">
-			<div class="float-left media">
-				<i class="fa fa-align-left fa-3x media-body"></i>
-				<h6 class="align-self-center d-flex">Some more about me</h6>
-			</div>
-			<div class="f">
-				<a data-toggle="collapse" href="#resume"><i class="fa fa-chevron-up chev fa-2x"></i></a>
-			</div>
-		</div>
-	</div>
-	<div id="resume" class="collapse show spacer">
-		<div class="row spacer-small">
-			<div  class="col-sm-8">
-				<div id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="">
-				    <div class="card-header red" role="tab" id="headingOne">
-				      <h4 class="mb-0">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-				          Employment
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-				      <div class="card-block">
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Altudo</h5><small class="text-muted float-right">2018 - Present</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">
-						    	<strong>Senior WordPress Developer</strong><br>
-						    	Responsible for both back-end and front-end development, including creating WordPress themes and plugins.
-						    </p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Freelance</h5><small class="text-muted float-right">2016 - 2017</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">
-							    <strong>WordPress Developer</strong><br>
-						    	Freelance web design and development
-						    </p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Webbles</h5><small class="text-muted float-right">2015 - 2015</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text"><strong>Web Developer</strong><br>
-						    Responsible for designing, coding and modifying websites, from layout to function and according to a client's specification.</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Kodework</h5><small class="text-muted float-right">2015 (April - October)</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">
-						    <strong>Quality Assurance Specialist</strong><br>
-						    Responsible for testing projects to verify browser compatibility, SEO, Responsive for desktop and mobile.</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Divine Computers</h5><small class="text-muted float-right">2014 - 2015</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">
-						    <strong>Field Engineer</strong><br>
-						    Responsible for troubleshooting computer and networkproblems, installation of networks solutions. Deployment of new computers/laptops etc.</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Segment Y</h5><small class="text-muted float-right">2013 - 2014</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">
-						    <strong>Data Analyst</strong><br>
-						    Data entry of various automotive statistics.<br>
-							Scanning automotive brochures and pricelists.<br>
-							Maintaining records of scanned materials and those published on-line.<br>
-							Supporting news &amp; researches etc.</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Ethernet X-press</h5><small class="text-muted float-right">2012 - 2013</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">
-						    	<strong>Network Field Engineer</strong><br>
-						    	Designing and implementing networks for internet around Goa
-						    </p>
-						  </div>
-						</div>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="">
-				    <div class="card-header red" role="tab" id="headingTwo">
-				      <h4 class="mb-0">
-				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-				          Education
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo">
-				      <div class="card-block">
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Innobuzz</h5><small class="text-muted float-right">2016 - 2017</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">Diploma In Web Application Security</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Education</h5><small class="text-muted float-right">2011 - 2012</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">Diploma In Hardware And Networking</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Living Hope Theological School</h5><small class="text-muted float-right">2009 - 2011</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">Bachelor of Theology</p>
-						  </div>
-						</div>
-						<div class="emp">
-						  <div class="card-header clearfix">
-						    <h5 class="float-left">Don Bosco</h5><small class="text-muted float-right">2008 - 2009</small>
-						  </div>
-						  <div class="card-body">
-						    <p class="card-text">Senior Secondary Course</p>
-						  </div>
-						</div>
-				      </div>
-				    </div>
-				  </div>
+<body class="dark">
+	<div class="container">
+		<div class="grid"></div>
+		<div class="row clearfix b-blue">
+			<div class="col-sm-12 flex-between">
+				<div class="float-left media">
+					<i class="fa fa-user fa-3x media-body"></i>
+					<h6 class="align-self-center d-flex">About</h6>
 				</div>
-			</div>	
-			<div class="col-sm-4">
-				<h4>Programming Skills</h4>
-				<p>
-					<h5><i class="fa fa-html5"></i>  HTML</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="fa fa-css3"></i> CSS</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="devicons devicons-javascript"></i>  Javascipt</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-warning" role="progressbar" style="width: 82%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="devicons devicons-jquery"></i> Jquery</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="devicons devicons-wordpress"></i>  WordPress</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="devicons devicons-php"></i> PHP</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-info" role="progressbar" style="width: 67%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="fa fa-paint-brush"></i>  Graphic design</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-warning" role="progressbar" style="width: 59%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-				<p>
-					<h5><i class="fa fa-sitemap"></i> Networking</h5>
-					<div class="progress">
-					  <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-					</div>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row clearfix spacer b-blue">
-		<div class="col-sm-12">
-			<div class="float-left media">
-				<i class="fa fa-rocket fa-3x media-body"></i>
-				<h6 class="align-self-center d-flex">Hobbies</h6> 
-			</div>
-			<div class="f">
-				<a data-toggle="collapse" href="#hobbies"><i class="fa fa-chevron-up chev fa-2x"></i></a>
-			</div>
-		</div>
-	</div>
-	<div id="hobbies" class="collapse show spacer">
-		<div class="row">
-			<div class="spacer-small col-sm-4 text-center">
-				<h4>Music</h4>
-				<i class="fa fa-music fa-10x"></i>
-			</div>
-			<div class="spacer-small col-sm-4 text-center">
-				<h4>Gaming</h4>
-				<i class="fa fa-gamepad fa-10x"></i>
-			</div>
-			<div class="spacer-small col-sm-4 text-center">
-				<h4>Riding</h4>
-				<i class="fa fa-motorcycle fa-10x"></i>
-				<div class="wheels col-sm-12">
-					<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-					<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+				<div>
+					<a data-toggle="collapse" href="#profile"><i class="fa fa-chevron-up chev fa-2x"></i></a>
 				</div>
 			</div>
-		</div>			
-	</div>
-	<div class="row clearfix spacer b-blue">
-		<div class="col-sm-12">
-			<div class="float-left media">
-				<i class="fa fa-handshake-o fa-3x media-body"></i>
-				<h6 class="align-self-center d-flex">Connect</h6>
+		</div>
+		<div id="profile" class="collapse show spacer">
+			<div class="row spacer-small">
+				<div class="col-sm-7 col-12">
+					<div class="row">
+						<div class="col-sm-8">
+							<h1 class="display-4">Wiseman Fernandes</h1>
+							<h4>Front-End Architect</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 spacer-small">
+					<p>Hi, I'm Wiseman, a freelance web designer hailing from the serene coastal enclave of Goa,
+						India. With a background in network engineering, I've embarked on a transformative journey into
+						the world of web development,
+						culminating in expertise in WordPress and Front-End technologies.
+					</p>
+					<p>
+						Drawing inspiration from the vibrant culture and scenic beauty of Goa, I've always been
+						passionate about crafting visually captivating and highly functional websites.
+						Whether you're a local business looking to establish a digital presence, a blogger in need of a
+						personal site, or a global brand seeking a unique touch, I can blend technical prowess with
+						artistic finesse to breathe life into your digital vision.
+					</p>
+				</div>
 			</div>
-			<div class="f">
-				<a data-toggle="collapse" href="#connect"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+		</div>
+		<div class="row clearfix spacer b-blue">
+			<div class="col-sm-12 flex-between">
+				<div class="float-left media">
+					<i class="fa fa-align-left fa-3x media-body"></i>
+					<h6 class="align-self-center d-flex">Some more about me</h6>
+				</div>
+				<div>
+					<a data-toggle="collapse" href="#resume"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+				</div>
+			</div>
+		</div>
+		<div id="resume" class="collapse show spacer">
+			<div class="row spacer-small">
+				<div class="col-sm-8">
+					<div id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="">
+							<div class="card-header red" role="tab" id="headingOne">
+								<h4 class="mb-0">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+										aria-expanded="false" aria-controls="collapseOne">
+										Employment
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+								<div class="card-block">
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Cogncise</h5><small
+												class="text-muted float-right">2022 - Present</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Front-End Lead</strong><br>
+												I'm responsible for managing and mentoring a team of front-end
+												developers, offering guidance, and fostering collaboration to ensure
+												project success. I'm proficient in a wide array of front-end
+												technologies, encompassing HTML, CSS, JavaScript, and various frameworks
+												and libraries, and I excel at translating design concepts into engaging,
+												user-friendly web interfaces. My responsibilities extend to coordinating
+												with designers, back-end developers, and project managers, ensuring
+												alignment with project goals and timelines.
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Remote Software Solutions</h5><small
+												class="text-muted float-right">2020 - 2022</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Senior WordPress Developer</strong><br>
+												As a Senior WordPress Developer, I design, develop, and maintain top-notch websites. My responsibilities include creating custom themes and plugins, optimizing performance, ensuring responsive design, and enhancing security. I collaborate with cross-functional teams, troubleshoot technical issues, and stay updated on industry trends while mentoring junior developers for ongoing improvement.
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Altudo</h5><small class="text-muted float-right">2018
+												- 2020</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Senior WordPress Developer</strong><br>
+												As a Senior WordPress Developer, I design, develop, and maintain top-notch websites. My responsibilities include creating custom themes and plugins, optimizing performance, ensuring responsive design, and enhancing security. I collaborate with cross-functional teams, troubleshoot technical issues, and stay updated on industry trends while mentoring junior developers for ongoing improvement.
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Freelance</h5><small
+												class="text-muted float-right">2016 - 2017</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>WordPress Developer</strong><br>
+												Freelance web design and development
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Webbles</h5><small
+												class="text-muted float-right">2015 - 2015</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text"><strong>Web Developer</strong><br>
+												Responsible for designing, coding and modifying websites, from layout to
+												function and according to a client's specification.</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Kodework</h5><small
+												class="text-muted float-right">2015 (April - October)</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Quality Assurance Specialist</strong><br>
+												Responsible for testing projects to verify browser compatibility, SEO,
+												Responsive for desktop and mobile.
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Divine Computers</h5><small
+												class="text-muted float-right">2014 - 2015</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Field Engineer</strong><br>
+												I am responsible for troubleshooting computer and network problems, ensuring the seamless operation of our systems. I also handle the installation of network solutions, configuring and optimizing them for efficiency. Additionally, I manage the deployment of new computers and laptops, ensuring they are set up and ready for use in our organization, thus contributing to a smooth and productive work environment.
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Segment Y</h5><small
+												class="text-muted float-right">2013 - 2014</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Data Analyst</strong><br>
+												Data entry of various automotive statistics.<br>
+												Scanning automotive brochures and pricelists.<br>
+												Maintaining records of scanned materials and those published
+												on-line.<br>
+												Supporting news &amp; researches etc.
+											</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Ethernet X-press</h5><small
+												class="text-muted float-right">2012 - 2013</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">
+												<strong>Network Field Engineer</strong><br>
+												Designing and implementing networks for internet around Goa
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="">
+							<div class="card-header red" role="tab" id="headingTwo">
+								<h4 class="mb-0">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+										aria-expanded="true" aria-controls="collapseTwo">
+										Education
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="card-block">
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Innobuzz</h5><small
+												class="text-muted float-right">2016 - 2017</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">Diploma In Web Application Security</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Education</h5><small
+												class="text-muted float-right">2011 - 2012</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">Diploma In Hardware And Networking</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Living Hope Theological School</h5><small
+												class="text-muted float-right">2009 - 2011</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">Bachelor of Theology</p>
+										</div>
+									</div>
+									<div class="emp">
+										<div class="card-header clearfix">
+											<h5 class="float-left">Don Bosco</h5><small
+												class="text-muted float-right">2008 - 2009</small>
+										</div>
+										<div class="card-body">
+											<p class="card-text">Senior Secondary Course</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<h4>Programming Skills</h4>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 95%; background-color: #f06529;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="fa fa-html5"></i>HTML</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar"
+							style="width: 90%;background-color: #2965f1;" aria-valuemin="0" aria-valuemax="100">
+							<div><i class="fa fa-css3"></i> CSS</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 82%; background-color: #F0DB4F;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="devicon-javascript-plain"></i> Javascipt</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 60%; background-color: #61DBFB;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="devicon-react-original"></i> React</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 85%; background-color: #21759b;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="devicon-wordpress-plain"></i>
+								WordPress</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 70%; background-color: #8993be;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="devicon-php-plain"></i>
+								PHP</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 59%; background-color: #3C327B;" aria-valuemin="0"
+							aria-valuemax="100">
+
+							<div><i class="devicon-photoshop-plain"></i>
+								Photoshop</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 69%; background-color: #66C6A6;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="fa fa-sitemap"></i> Networking</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 65%; background-color: #FF9900;" aria-valuemin="0"
+							aria-valuemax="100">
+							<div>
+								
+								<i class="devicon-amazonwebservices-original"></i>
+								AWS
+
+							</div>
+						</div>
+					</div>
+					</p>
+					<p>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuemin="0"
+							aria-valuemax="100">
+							<div><i class="fa fa-css3"></i> Security</div>
+						</div>
+					</div>
+					</p>
+					<div class="theme-toggle">
+						<svg id="Moon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-name="Layer 4">
+							<path d="m30.706 19.721a1 1 0 0 0 -1.042-.234 13.423 13.423 0 0 1 -17.151-17.152 1 1 0 0 0 -1.276-1.278 15.214 15.214 0 0 0 -5.727 3.623 15.422 15.422 0 0 0 21.81 21.81 15.213 15.213 0 0 0 3.623-5.728 1 1 0 0 0 -.237-1.041zm-4.8 5.355a13.422 13.422 0 1 1 -15.859-21.312 15.514 15.514 0 0 0 4.2 13.985 15.51 15.51 0 0 0 13.985 4.2 13.357 13.357 0 0 1 -2.326 3.127z"/></svg>
+						<svg id="Sun" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+							<g stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+								<circle cx="15" cy="15" r="5"/>
+								<path d="m15 5v-2"/>
+								<path d="m15 27v-2"/>
+								<path d="m5 15h-2"/>
+								<path d="m27 15h-2"/>
+								<path d="m7.93 22.07-1.42 1.42"/>
+								<path d="m23.49 6.51-1.42 1.42"/>
+								<path d="m22.07 22.07 1.42 1.42"/>
+								<path d="m6.51 6.51 1.42 1.42"/>
+							</g>
+							</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix spacer b-blue">
+			<div class="col-sm-12 flex-between">
+				<div class="float-left media">
+					<i class="fa fa-rocket fa-3x media-body"></i>
+					<h6 class="align-self-center d-flex">Hobbies</h6>
+				</div>
+				<div>
+					<a data-toggle="collapse" href="#hobbies"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+				</div>
+			</div>
+		</div>
+		<div id="hobbies" class="collapse show spacer">
+			<div class="row">
+				<div class="spacer-small col-sm-4 text-center">
+					<h4>Music</h4>
+					<i class="fa fa-music fa-10x"></i>
+				</div>
+				<div class="spacer-small col-sm-4 text-center">
+					<h4>Gaming</h4>
+					<i class="fa fa-gamepad fa-10x"></i>
+				</div>
+				<div class="spacer-small col-sm-4 text-center">
+					<h4>Riding</h4>
+					<i class="fa fa-motorcycle fa-10x"></i>
+				</div>
+			</div>
+		</div>
+		<div class="row clearfix spacer b-blue">
+			<div class="col-sm-12 flex-between">
+				<div class="float-left media">
+					<i class="fa fa-handshake-o fa-3x media-body"></i>
+					<h6 class="align-self-center d-flex">Connect</h6>
+				</div>
+				<div>
+					<a data-toggle="collapse" href="#connect"><i class="fa fa-chevron-up chev fa-2x"></i></a>
+				</div>
+			</div>
+		</div>
+		<div id="connect" class="collapse show spacer">
+			<div class="row">
+				<div class="col-sm-3 col-12 text-center spacer-small">
+					<a href="https://www.linkedin.com/in/wiseman-fernandes-1b556a80/">
+						<i class="fa fa-linkedin fa-5x"></i><br>
+						.in/wiseman-fernandes-1b556a80/
+					</a>
+				</div>
+				<div class="col-sm-3 col-12 text-center spacer-small">
+					<a href="mailto:wizyman@gmail.com">
+						<i class="fa fa-envelope fa-5x"></i><br>
+						wizyman@gmail.com
+					</a>
+				</div>
+				<div class="col-sm-3 col-12 text-center spacer-small">
+					<a href="tel:+918975574907">
+						<i class="fa fa-phone fa-5x"></i><br>
+						+91 897 557 4907
+					</a>
+				</div>
+				<div class="col-sm-3 col-12 text-center spacer-small">
+					<a href="https://blog.wiseman.dev/" target="_blank">
+						<i class="fa fa-link fa-5x"></i><br>
+						Checkout my blog!
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div id="connect" class="collapse show spacer">
-		<div class="row spacer-small">
-			<div class="col-sm-3 col-12 text-center">
-				<a href="https://www.linkedin.com/in/wiseman-fernandes-1b556a80/">
-					<i class="fa fa-linkedin fa-5x"></i><br>
-					.in/wiseman-fernandes-1b556a80/
-				</a>
-			</div>
-			<div class="col-sm-3 col-12 text-center">
-				<a href="mailto:wizyman@gmail.com">
-					<i class="fa fa-envelope fa-5x"></i><br>
-					wizyman@gmail.com
-				</a>
-			</div>
-			<div class="col-sm-3 col-12 text-center">
-				<a href="tel:+918975574907">
-					<i class="fa fa-phone fa-5x"></i><br>
-					+91 897 557 4907
-				</a>
-			</div>
-			<div class="col-sm-3 col-12 text-center">
-				<a href="#" data-toggle="modal" data-target="#exampleModal">
-					<i class="fa fa-link fa-5x"></i><br>
-					A sample of my work
-				</a>	
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div class="modal-dialog" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <p class="modal-title" id="exampleModalLabel">&nbsp;</p>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        <h5><a href="https://sterlinggemsth.com/" target="_blank">Sterling Gems</a></h5>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-			</div>
-		</div>		
-	</div>
-</div>
-<script type="text/javascript">
-$(function(){
-	$("a[data-target='#exampleModal']").click(function(){$('#myModal').modal('toggle')});
-	$(".chev").click(function(){$(this.closest("a").attributes[1].value).hasClass("show") ? this.attributes[0].value = "fa fa-chevron-down fa-2x" : this.attributes[0].value = "fa fa-chevron-up fa-2x";});
-})
-</script>
+	<script type="text/javascript">
+	$(function(){
+		$("a[data-target='#exampleModal']").click(function(){$('#myModal').modal('toggle')});
+		$(".theme-toggle").click(s => {
+			document.body.classList.toggle("dark")
+		})
+		$(".chev").click(function(){$(this.closest("a").attributes[1].value).hasClass("show") ? this.attributes[0].value = "fa fa-chevron-down fa-2x" : this.attributes[0].value = "fa fa-chevron-up fa-2x";});
+	})
+	</script>
 </body>
 </html>
