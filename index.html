@@ -36,6 +36,7 @@
 			--primary: #f2f2f2;
 			--secondary: #f2f2f2;
 			--background: #121212;
+			--accent: #454545;
 		}
 		h6 {
 			font-family: 'Emblema One', cursive !important;
@@ -242,7 +243,19 @@
 			display: flex;
 			height: auto;
 		}
-
+		.dark .progress-bar {
+			background-color: var(--accent) !important;
+		}
+		.dark .fa-music, .dark .fa-gamepad, .dark .fa-motorcycle {
+			color: var(--accent);
+			animation: none;
+		}
+		.dark #connect i {
+			color: var(--accent);
+		}
+		.dark a {
+			color: var(--primary)
+		}
 		.progress-bar>div {
 			font-size: 1rem;
 			height: 2rem;
@@ -294,9 +307,6 @@
             transform-origin: calc(var(--btn-width) / -2) var(--btn-width);
             opacity: 0;
         }
-		.dark .fa-motorcycle {
-			color: var(--primary);
-		}
         #Sun {
             position: absolute;
             opacity: 0;
@@ -345,7 +355,7 @@
 					</div>
 				</div>
 				<div class="col-sm-12 spacer-small">
-					<p>Hi, I'm Wiseman, a freelance web designer hailing from the serene coastal enclave of Goa,
+					<p>Hi, I'm Wiseman, a web designer hailing from the serene coastal enclave of Goa,
 						India. With a background in network engineering, I've embarked on a transformative journey into
 						the world of web development,
 						culminating in expertise in WordPress and Front-End technologies.
